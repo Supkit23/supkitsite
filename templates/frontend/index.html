@@ -1,0 +1,198 @@
+{% extends 'frontend/base.html' %}
+{% block title %} supkit23 {% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    * {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    .content {
+        background-color: #ddd;
+        padding: 10px;
+        height: 200px; /* Should be removed. Only for demonstration */
+    }
+    .footer {
+        background-color: #f1f1f1;
+    padding: 10px;
+}
+  </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top"> 
+        <ul class="navbar-nav">
+            <li>
+              <a class="nav-link" href="#">Split-ACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section1">DevTeam</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section2">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section3">Contact</a>
+            </li>            
+        </ul>
+        <button type="submit" class="btn btn-dark"> <a style="color: rgb(255, 255, 255);" href="{% url 'index2' %}">Dark Mode</a></button>
+    </nav>
+
+    <div class="card">
+        <img class="card-img-top" src="holder.js/100x180/">
+        <div class="card-body">
+        </div>
+    </div>
+
+    <div id="section1" class="jumbotron" style="padding-top:70px;padding-bottom:70px; background:rgb(192, 192, 192);">
+        <h1>Dev Team of Split-ACT</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">ChaMick7</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">supkit23</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">Miwwie</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal4">stw</button>
+    </div>
+
+    <div class="modal" id="myModal1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h1 class="modal-title">aka 'ChaMick7'</h1>
+              <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>           
+            <!-- Modal body -->
+            <div class="modal-body">
+              <h4>Sorrawat Hayeehateng</h4>   
+              <p>&#160;&#160;&#160;Fullstack Dev และหัวหน้าทีม</p>
+            </div>          
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>           
+          </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h1 class="modal-title">aka 'supkit23'</h1>
+              <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>           
+            <!-- Modal body -->
+            <div class="modal-body">
+              <h4>Suppakrit Tamseewan</h4>   
+              <p>&#160;&#160;&#160;UX/UI และเลขาทีม/p>
+            </div>          
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>           
+          </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal3">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h1 class="modal-title">aka 'Miwwie'</h1>
+              <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>           
+            <!-- Modal body -->
+            <div class="modal-body">
+              <h4>Nattawat Thonghan</h4>   
+              <p>&#160;&#160;&#160;Frontend ผู้ออกแบบ website ตามที่ UX/UI ออกแบบ</p>
+            </div>          
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>           
+          </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal4">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">aka 'stw'</h4>
+              <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>           
+            <!-- Modal body -->
+            <div class="modal-body">
+              <h3>Settawat YingYongchai</h3>   
+              <p>&#160;&#160;&#160;Backend ผู้อยู่เบื่องระบบภายในเว็ป</p>
+            </div>          
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>           
+          </div>
+        </div>
+    </div>
+
+    <div id="section2" class="jumbotron" style="padding-top:70px;padding-bottom:70px; background:rgb(212, 212, 212);">
+        <h1>About Split-ACT</h1>
+        <p>Split-ACT คือ web / app ที่ออกแบบมาเพื่อเป็นเครื่องมือช่วยในการแบ่งงาน หรือกิจกรรมของสมาชิกในทีม โดยจะสามารถแบ่งหน้าที่รวมไปถึงติดตามการทำงานของสมาชิกในกลุ่ม</p>
+        <p>นอกจากนียังมีตัว Prototype และ website ที่ได้จัดทำไปแล้วบางส่วน</p>
+        <button type="button" class="btn btn-secondary btn-lg btn-block"><a style="color: rgb(209, 209, 209);" href="https://www.figma.com/proto/kHbgtpugA0v5PibRYun86X/Project-S.A.?node-id=110%3A0&scaling=min-zoom">Prototype of Split-ACT</a></button>
+        <button type="button" class="btn btn-info btn-lg btn-block"><a style="color: rgb(209, 209, 209);" href="https://splitact.com/">Split-ACT.com</a></button>
+    </div>
+
+    <div id="section3" class="jumbotron" style="padding-top:70px;padding-bottom:70px; background:rgb(236, 236, 236);">
+        <h1>My Contact</h1>
+        <p>ช่องทางการติดต่อ และ Profile ต่างๆของ supkit23</p>
+        <button type="button" class="btn btn-primary btn-lg btn-block"><a style="color: rgb(255, 255, 255);" href="https://www.facebook.com/Suppakrit23">Facebook</a></button>
+        <button type="button" class="btn btn-success btn-lg btn-block"><a style="color: rgb(255, 255, 255);" href="https://line.me/ti/p/1IRwTpPv4n">Line</a></button>
+        <button type="button" class="btn btn-dark btn-lg btn-block"><a style="color: rgb(255, 255, 255);" href="https://github.com/Supkit23">Github</a></button>
+        <button type="button" class="btn btn-danger btn-lg btn-block"><a style="color: rgb(255, 255, 255);" href="https://www.instagram.com/ssupkitt/">Instagram</a></button>
+    </div>
+
+    <nav class="nav justify-content-center bg-light navbar-light fixed-bottom ">
+        <h2> Information Engineering @King Mongkut's Institute Of Technology Ladkrabang</h2>
+    </nav>
+
+</body>
+</html>
+
+{% endblock %}
